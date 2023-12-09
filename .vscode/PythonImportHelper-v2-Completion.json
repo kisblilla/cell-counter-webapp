@@ -70,11 +70,20 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "run",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def run():\n    st.title(\"Vérsejt számláló\")\n    st.text(\"Megadja, hogy adott képen hány darab vérsejt látható\")\n    option = st.selectbox(\n    'Kép feltöltése vagy alapértelmezett képek közül választás:',\n    ('Példa képek', 'Feltöltés'))\n    IMG_HEIGHT = 128\n    IMG_WIDTH = 128\n    if option == 'Feltöltés':\n        data_file = st.file_uploader(\"Kép feltöltése\")",
+        "peekOfCode": "def run():\n    st.title(\"Cell counter\")\n    st.text(\"Detect and count the cells on images\")\n    option = st.selectbox(\n    'Kép feltöltése vagy alapértelmezett képek közül választás:',\n    ('Példa képek', 'Feltöltés'))\n    IMG_HEIGHT = 128\n    IMG_WIDTH = 128\n    test_id_list = os.listdir('./img')\n    if option == 'Feltöltés':",
         "detail": "app",
         "documentation": {}
     }
